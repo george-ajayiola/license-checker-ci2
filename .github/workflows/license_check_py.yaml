@@ -1,7 +1,10 @@
 name: License  checker for python
 
 on:
-  workflow_dispatch:
+  # run on pushes to the default branch
+  push:
+    branches:
+      - main
 jobs:
   license_check:
     runs-on: ubuntu-latest
